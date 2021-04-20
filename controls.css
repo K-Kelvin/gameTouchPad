@@ -12,6 +12,9 @@
 
   --touchpad-button-arrow-color: #333;
 }
+body {
+  position: relative;
+}
 #touchpad {
   position: absolute;
   bottom: var(--touchpad-bottomright-position);
