@@ -41,7 +41,7 @@ button.control {
 button.control svg {
   display: block;
   /* transform: rotate(calc(var(--rotate-angle) * -1)); */
-  color: var(--arrow-color);
+  color: var(--touchpad-button-arrow-color);
   width: 24px;
   height: 24px;
 }
