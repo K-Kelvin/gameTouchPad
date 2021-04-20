@@ -1,0 +1,57 @@
+:root {
+  --touchpad-bg: #33333344;
+  --touchpad-color: #fafafa;
+  --touchpad-padding: 24px;
+  --touchpad-bottomright-position: 24px;
+  --touchpad-scale: 0.8; /* change touchpad size, values between 0 and 1 */
+
+  --touchpad-button-bg: rgba(255, 255, 255, 0.3);
+  --touchpad-button-bg-pressed: salmon;
+  --touchpad-button-spacing: 6px;
+  --touchpad-button-border-radius: 8px;
+
+  --touchpad-button-arrow-color: #333;
+}
+#touchpad {
+  position: absolute;
+  bottom: var(--touchpad-bottomright-position);
+  right: var(--touchpad-bottomright-position);
+  z-index: 200;
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 1fr;
+  gap: var(--touchpad-button-spacing);
+  padding: var(--touchpad-padding);
+  border-radius: 50%; /* touchpad rounded */
+  --rotate-angle: 45deg;
+  transform: rotate(var(--rotate-angle)) scale(0.8);
+  background-color: var(--touchpad-bg);
+}
+#touchpad button {
+  border: none;
+  outline: none;
+  display: block;
+}
+button.control {
+  background-color: var(--touchpad-button-bg);
+  border-radius: var(--touchpad-button-border-radius);
+  padding: 8px;
+  transform: rotate(calc(var(--rotate-angle) * -1));
+  margin: 6px;
+}
+button.control svg {
+  display: block;
+  /* transform: rotate(calc(var(--rotate-angle) * -1)); */
+  color: var(--arrow-color);
+  width: 24px;
+  height: 24px;
+}
+button.control.active {
+  background-color: var(--touchpad-button-bg-pressed);
+}
+
+/* hide the touchpad in laptops and desktops ... */
+@media screen and (min-device-width: 768.5px) {
+  #touchpad {
+    display: none;
+  }
+}
