@@ -19,3 +19,5 @@ Add a link to [controls.css](./controls.css) and [controls.js](./controls.js) wi
   <script src="controls.js" defer></script>
 </head>
 ```
+
+A live version of the boilerplate can be found [here](https://k-kelvin.github.io/gameTouchPad/)
