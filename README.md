@@ -14,6 +14,7 @@ Add a link to [controls.css](./controls.css) and [controls.js](./controls.js) wi
 
 ```html
 <head>
+  ...
   <link rel="stylesheet" href="controls.css" />
   <script src="controls.js" defer></script>
 </head>
